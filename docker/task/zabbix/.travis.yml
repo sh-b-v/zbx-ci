@@ -2,3 +2,10 @@ language: ruby
 
 services:
   - docker
+before_install:
+        - docker build -t ubnt .
+deploy:
+  provider: script
+  script: bash image_push
+  on:
+    branch: master
