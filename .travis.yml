@@ -1,6 +1,8 @@
 language: php 
 php:
         7.4.7
+script:
+        echo "test"
 services:
   - docker
 before_install:
