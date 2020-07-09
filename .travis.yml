@@ -9,6 +9,6 @@ before_install:
         - docker build -t ubnt docker/task/zabbix
 deploy:
   provider: script
-  script: bash image_push
+  script: bash image_push docker/task/zabbix
   on:
     branch: master
